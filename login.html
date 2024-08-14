@@ -25,13 +25,18 @@
         <label><input type="checkbox">lembrar de mim</label>  
         <a href="#">esqueci a senha</a>  
       </div>  
-      <button id="myButton" type="submit" class="btn">Login</button>  
+      <button id="myButton" type="submit" class="btn" onclick="redirectToPage(event)">Login</button>  
       <div class="register-link">  
         <p>Não possui uma conta? <a href="#">Criar</a></p>  
       </div>  
     </form>  
   </div>  
 
-  <script src="./js/script.js"></script>  
+  <script>
+    function redirectToPage(event) {
+        event.preventDefault(); 
+        window.location.href = "teste.html"; // Substitua "pagina_desejada.html" pelo caminho da sua página
+    }
+  </script>
 </body>  
 </html>

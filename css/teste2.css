@@ -1,0 +1,86 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(23, 198, 26) 100%);
+    color: #ffffff;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    height: 100vh;  
+    margin: 0;  
+}  
+
+#quiz-container {  
+    text-align: center;  
+    max-width: 400px; /* Largura máxima reduzida */
+    width: 90%; /* Largura ajustável com base no viewport */
+    padding: 20px; /* Adiciona um pouco de padding */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5); /* Sombra para destacar o contêiner */
+}  
+
+button {  
+    background-color: #ffffff;  
+    color: rgb(0, 255, 4);  
+    font-family: 'Rowdies', cursive;
+    border: none;  
+    border-radius: 8px;  
+    padding: 10px 15px; /* Reduzido para botões menores */
+    font-size: 16px; /* Tamanho de fonte ligeiramente menor */
+    margin: 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s ease, transform 0.1s ease;  
+    width: calc(100% - 10px);  
+}  
+
+button:hover {  
+    background-color: #000000;  
+}  
+
+button#verify {  
+    background-color: #000000;  
+}  
+
+button#verify:hover {  
+    background-color: #ffffff;  
+}  
+
+button:disabled {  
+    background-color: #cccccc;  
+    cursor: not-allowed;  
+}  
+
+#options {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    gap: 10px; /* Espaço entre as opções */
+}  
+
+#progress-bar {  
+    height: 8px; /* Altura ligeiramente reduzida */
+    background-color: #3cff00;  
+    border-radius: 5px;  
+    margin-bottom: 15px;  
+    width: 0;  
+    transition: width 0.5s;  
+}  
+
+#score-container {  
+    display: none;  
+    margin-top: 15px;  
+}  
+
+.selected-pink {
+    background-color: rgb(38, 255, 0); 
+    color: white; 
+}
+
+.text-success {  
+    color: green;  
+}  
+
+.text-danger {  
+    color: red;  
+}  

@@ -3,34 +3,34 @@ let correctAnswers = 0;
 
 const phrases = [
     {
-        text: "Como você imprime 'Olá, Mundo!' em Java?",
-        options: ["System.out.println", "\"Olá, Mundo!\"", ";", "(", ")"],
-        answer: ["System.out.println", "(", "\"Olá, Mundo!\"", ")", ";"],
-        explanation: "Para imprimir 'Olá, Mundo!' em Java, usamos o método System.out.println(), que imprime o texto e pula para a próxima linha."
+        text: "Como você imprime 'Olá, Mundo!' em JavaScript?",
+        options: ["console.log", "\"Olá, Mundo!\"", ";", "(", ")"],
+        answer: ["console.log", "(", "\"Olá, Mundo!\"", ")", ";"],
+        explanation: "Para imprimir 'Olá, Mundo!' em JavaScript, usamos a função console.log(), que exibe a saída no console do navegador."
     },
     {
-        text: "Como criar uma variável chamada x e atribuir a ela o valor 5 em Java?",
-        options: ["int", "x", "=", "5", ";", "double"],
-        answer: ["int", "x", "=", "5", ";"],
-        explanation: "Em Java, declaramos uma variável especificando seu tipo (como int) seguido pelo nome da variável, atribuição de valor e ponto e vírgula."
+        text: "Como criar uma variável chamada x e atribuir a ela o valor 5 em JavaScript?",
+        options: ["let", "x", "=", "5", ";", "var"],
+        answer: ["let", "x", "=", "5", ";"],
+        explanation: "Em JavaScript, usamos 'let' ou 'var' para declarar uma variável e atribuir um valor a ela."
     },
     {
-        text: "Como pedir ao usuário para digitar seu nome e armazenar em uma variável chamada nome em Java?",
-        options: ["Scanner", "new", "=", "nome", "(", "System.in", ")", "nextLine"],
-        answer: ["Scanner", "scanner", "=", "new", "Scanner", "(", "System.in", ")", ";", "String", "nome", "=", "scanner.nextLine", "(", ")", ";"],
-        explanation: "Em Java, usamos a classe Scanner para receber a entrada do usuário e armazenar o valor na variável especificada."
+        text: "Como pedir ao usuário para digitar seu nome e armazenar em uma variável chamada nome em JavaScript?",
+        options: ["prompt", "nome", "(", "'Digite seu nome:'", ")", "="],
+        answer: ["let", "nome", "=", "prompt", "(", "'Digite seu nome:'", ")"],
+        explanation: "Em JavaScript, usamos a função prompt() para pedir ao usuário que insira dados, e armazenamos o valor em uma variável."
     },
     {
-        text: "Como somar 10 e 20 em Java?",
-        options: ["+", "20", "10", "int", "soma", "="],
-        answer: ["int", "soma", "=", "10", "+", "20", ";"],
-        explanation: "Em Java, podemos somar dois números usando o operador + e armazenar o resultado em uma variável."        
+        text: "Como obter o comprimento de uma string em JavaScript?",
+        options: [".length", "minhaString", ";", "=", "()", "[ ]"],
+        answer: ["minhaString", ".", "length"],
+        explanation: "Em JavaScript, podemos obter o comprimento de uma string usando a propriedade length, como em minhaString.length."
     },
     {
-        text: "Como somar 10 e 20?",
-        options: ["10", "x", "7", ")", "20", "+"],
-        answer: ["10", "+", "20", ")"],
-        explanation: "Podemos somar dois números em Python usando o operador +."
+        text: "Como somar 10 e 20 em JavaScript?",
+        options: ["+", "20", "10", "=", ";"],
+        answer: ["10", "+", "20"],
+        explanation: "Em JavaScript, podemos somar dois números usando o operador +."
     }
 ];
 

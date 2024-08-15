@@ -1,29 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {  
     const questions = [  
         {  
-            question: "Qual é o melhor atalho para incrementar a variável a=0 em Python?",  
-            options: ["a += 1", "a += 1", "a = a + 1"],  
+            question: "Qual a forma correta de declarar uma função (método) em Java?",  
+            options: ["public void minhaFuncao()", "void minhaFuncao()", "function minhaFuncao()"],  
             answer: 0  
         },  
         {  
-            question: "É uma biblioteca da linguagem Python que permite desenvolver interfaces gráficas?",  
-            options: ["XWindow", "Tkinter", "Allegro"],  
-            answer: 1  
+            question: "Qual das opções a seguir é a maneira correta de verificar se uma variável x é maior que 10 em Java?",  
+            options: ["if (x > 10)", "if x > 10", "if (x > 10) then"],  
+            answer: 0  
         },  
         {  
             question: "Qual dos métodos abaixo usamos para receber algum dado do usuário através do CLI?",  
-            options: ["print()", "scanf()", "input()0"],  
-            answer: 2  
+            options: ["System.in()", "Scanner.nextLine()", "input()"],  
+            answer: 1  
         },  
         {  
-            question: "Qual a forma correta de declarar uma função?",  
-            options: ["soma(A, B){ }", "def soma(A, B):", "soma(A, B){ }"],  
-            answer: 1  
+            question: "Qual é o melhor atalho para incrementar a variável a=0 em Java?",  
+            options: ["java.util.*", "java.io.*", "java.lang.*"],  
+            answer: 0  
         },  
         {  
             question: "Qual das opções a seguir é a maneira correta de verificar se uma variável x é maior que 10 em Python?",  
-            options: ["if (x > 10) {}", "if x > 10", "if x > then"],  
-            answer: 1  
+            options: ["if (x > 10) {}", "a += 1;", "a++;"],  
+            answer: 2  
         }  
     ];  
 

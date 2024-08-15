@@ -3,28 +3,28 @@ let correctAnswers = 0;
 
 const phrases = [
     {
-        text: "Como você imprime 'Olá, Mundo!' em Java?",
-        options: ["System.out.println", "\"Olá, Mundo!\"", ";", "(", ")"],
-        answer: ["System.out.println", "(", "\"Olá, Mundo!\"", ")", ";"],
-        explanation: "Para imprimir 'Olá, Mundo!' em Java, usamos o método System.out.println(), que imprime o texto e pula para a próxima linha."
+        text: "Como você imprime 'Olá, Mundo!' em Python?",
+        options: ["(", "'Olá", "Mundo'", ")", "print", "!"],
+        answer: ["print", "(", "'Olá", "Mundo'", "!", ")"],
+        explanation: "Para imprimir 'Olá, Mundo!' em Python, usamos a função print(), que permite exibir texto na tela."
     },
     {
-        text: "Como criar uma variável chamada x e atribuir a ela o valor 5 em Java?",
-        options: ["int", "x", "=", "5", ";", "double"],
-        answer: ["int", "x", "=", "5", ";"],
-        explanation: "Em Java, declaramos uma variável especificando seu tipo (como int) seguido pelo nome da variável, atribuição de valor e ponto e vírgula."
+        text: "Como criar uma variável chamada x e atribuir a ela o valor 5?",
+        options: ["x", "y", "5", "15", "=", "int"],
+        answer: ["x", "=", "5"],
+        explanation: "Variáveis são usadas para armazenar valores. Em Python, podemos criar uma variável simplesmente atribuindo um valor a um nome."
     },
     {
-        text: "Como pedir ao usuário para digitar seu nome e armazenar em uma variável chamada nome em Java?",
-        options: ["Scanner", "new", "=", "nome", "(", "System.in", ")", "nextLine"],
-        answer: ["Scanner", "scanner", "=", "new", "Scanner", "(", "System.in", ")", ";", "String", "nome", "=", "scanner.nextLine", "(", ")", ";"],
-        explanation: "Em Java, usamos a classe Scanner para receber a entrada do usuário e armazenar o valor na variável especificada."
+        text: "Como pedir ao usuário para digitar seu nome e armazenar em uma variável chamada nome?",
+        options: ["input", ")", "=", "'digite seu nome: '", "(", "nome"],
+        answer: ["nome", "=", "input", "(", "'digite seu nome: '", ")"],
+        explanation: "Podemos usar o comando input para receber dados do usuário. Por exemplo, podemos pedir ao usuário para digitar seu nome."
     },
     {
-        text: "Como somar 10 e 20 em Java?",
-        options: ["+", "20", "10", "int", "soma", "="],
-        answer: ["int", "soma", "=", "10", "+", "20", ";"],
-        explanation: "Em Java, podemos somar dois números usando o operador + e armazenar o resultado em uma variável."        
+        text: "Como obter o comprimento da string 'Python'?",
+        options: ["if", "x", "len", ")", "'Python'", "("],
+        answer: ["len", "(", "'Python'", ")"],
+        explanation: "Podemos usar len para obter o comprimento de uma string."
     },
     {
         text: "Como somar 10 e 20?",

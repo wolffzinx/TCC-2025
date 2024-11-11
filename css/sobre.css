@@ -1,0 +1,153 @@
+/* Variáveis de cores (da página principal) */
+:root {
+    --color-primary-1: #fdeeee;
+    --color-primary-2: #fdeeee;
+    --color-primary-3: #09e918;
+    --color-primary-4: #09e918;
+    --color-primary-5: #09e918;
+    --color-primary-6: #09e918;
+
+    --color-neutral-0: #fff;
+    --color-neutral-1: #1d1d1d;
+
+    /* Variável para a cor do texto */
+    --color-text: #1d1d1d;
+}
+
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilo do Header */
+header {
+    background-color: var(--header-bg);
+    padding: 20px 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#nav_logo {
+    font-size: 24px;
+    color: var(--logo-color);
+}
+
+#nav_list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+.nav-item a:hover,
+.nav-item.active a {
+    color: var(--active-link-color);
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Seção Sobre Nós */
+#about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#cta .title {
+    font-size: 36px;
+    color: var(--title-color);
+}
+
+#cta .description {
+    font-size: 18px;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+.developer {
+    margin-top: 50px;
+}
+
+.developer-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.developer-item {
+    width: 45%;
+    text-align: center;
+}
+
+.developer-item img {
+    width: 100%;
+    border-radius: 50%;
+    height: auto;
+    max-width: 200px;
+}
+
+.developer-item h3 {
+    margin-top: 15px;
+    font-size: 22px;
+    color: var(--title-color);
+}
+
+.developer-item p {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+/* Estilo do Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media-buttons a {
+    margin: 0 10px;
+    color: var(--footer-icon-color);
+    font-size: 24px;
+}
+
+.social-media-buttons a:hover {
+    color: var(--footer-icon-hover-color);
+}
+
+#footer_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#copyright {
+    font-size: 14px;
+}
+

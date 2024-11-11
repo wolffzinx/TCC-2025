@@ -25,7 +25,9 @@
         <label><input type="checkbox">lembrar de mim</label>  
         <a href="#">esqueci a senha</a>  
       </div>  
-      <button id="myButton" type="submit" class="btn" onclick="redirectToPage(event)">Login</button>  
+      <button id="myButton" type="submit" class="btn" onclick="redirectToPage(event)">
+        <a href="linguagens.html">Login</a>
+      </button>  
       <div class="register-link">  
         <p>Não possui uma conta? <a href="#">Criar</a></p>  
       </div>  
@@ -35,7 +37,7 @@
   <script>
     function redirectToPage(event) {
         event.preventDefault(); 
-        window.location.href = "teste.html"; // Substitua "pagina_desejada.html" pelo caminho da sua página
+        window.location.href = "linguagens.html"; // Substitua "pagina_desejada.html" pelo caminho da sua página
     }
   </script>
 </body>  

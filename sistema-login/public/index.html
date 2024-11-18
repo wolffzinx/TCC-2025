@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <label for="theme-toggle" class="theme-toggle-label">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </label>
+    </div>
+
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>CodeCrafters</h1>
+            <p>Transformando ideias em código</p>
+        </div>
+
+        <div class="form-container">
+            <div class="form-switch">
+                <button class="switch-btn active" data-form="login">Login</button>
+                <button class="switch-btn" data-form="register">Registrar</button>
+            </div>
+
+            <form id="loginForm" class="form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" required>
+                </div>
+                <button type="submit">
+                    <span>Entrar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+
+            <form id="registerForm" class="form hidden">
+                <h2>Registro</h2>
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Senha" required>
+                </div>
+                <button type="submit">
+                    <span>Registrar</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

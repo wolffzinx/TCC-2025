@@ -1,81 +1,81 @@
 document.addEventListener('DOMContentLoaded', () => {
     const questions = [
         {
-            question: "Qual é a declaração correta de uma variável inteira em Java?",
+            question: "Qual Collection deve ser usada quando precisamos manter a ordem de inserção e permitir elementos duplicados?",
             options: [
-                "numero = 10;",
-                "int numero = 10;",
-                "Integer numero = 10",
-                "var numero = 10;"
+                "HashSet",
+                "ArrayList",
+                "HashMap",
+                "TreeSet"
             ],
             correct: 1,
-            explanation: "Em Java, precisamos declarar o tipo da variável explicitamente. Para números inteiros, usamos 'int'."
+            explanation: "ArrayList mantém a ordem de inserção e permite elementos duplicados."
         },
         {
-            question: "Como declarar corretamente uma String em Java?",
+            question: "Como tratar corretamente uma possível NullPointerException?",
             options: [
-                "String nome = João;",
-                "String nome = 'João';",
-                'String nome = "João";',
-                "nome = 'João';"
+                "Ignorar, pois é um erro comum",
+                "Usar System.exit(0)",
+                "Usar try-catch e tratar a exception",
+                "Adicionar throws na assinatura do método"
             ],
             correct: 2,
-            explanation: "Strings em Java devem ser declaradas com aspas duplas."
+            explanation: "O bloco try-catch é a forma correta de tratar exceptions em tempo de execução."
         },
         {
-            question: "Qual tipo de variável é usado para armazenar números decimais em Java?",
+            question: "Qual Collection usar quando precisamos garantir elementos únicos?",
             options: [
-                "int",
-                "decimal",
-                "float",
-                "double"
-            ],
-            correct: 3,
-            explanation: "double é o tipo mais comum para números decimais em Java."
-        },
-        {
-            question: "Qual é o valor padrão de uma variável boolean em Java?",
-            options: [
-                "true",
-                "false",
-                "null",
-                "0"
-            ],
-            correct: 1,
-            explanation: "O valor padrão de uma variável boolean é false."
-        },
-        {
-            question: "Como declarar uma constante em Java?",
-            options: [
-                "const int VALOR = 10;",
-                "constant int VALOR = 10;",
-                "final int VALOR = 10;",
-                "static int VALOR = 10;"
+                "ArrayList",
+                "LinkedList",
+                "HashSet",
+                "Vector"
             ],
             correct: 2,
-            explanation: "Em Java, usamos a palavra-chave 'final' para declarar constantes."
+            explanation: "HashSet não permite elementos duplicados, garantindo unicidade."
         },
         {
-            question: "Qual é o tipo correto para armazenar um único caractere em Java?",
+            question: "Qual é a forma correta de adicionar um elemento em um ArrayList?",
             options: [
-                "String",
-                "char",
-                "Character",
-                "letra"
+                "list.push(elemento);",
+                "list.insert(elemento);",
+                "list.add(elemento);",
+                "list.put(elemento);"
             ],
-            correct: 1,
-            explanation: "char é usado para armazenar um único caractere em Java."
+            correct: 2,
+            explanation: "O método add() é usado para adicionar elementos em um ArrayList."
         },
         {
-            question: "Qual declaração está correta para uma variável que pode armazenar números inteiros ou null?",
+            question: "Qual exception é lançada ao tentar converter uma String inválida para número?",
             options: [
-                "int numero = null;",
-                "Integer numero = null;",
-                "nullable int numero;",
-                "Null<Integer> numero;"
+                "ParseException",
+                "ConversionException",
+                "NumberFormatException",
+                "IllegalArgumentException"
+            ],
+            correct: 2,
+            explanation: "NumberFormatException é lançada quando há erro na conversão de String para número."
+        },
+        {
+            question: "Como adicionar um par chave-valor em um HashMap?",
+            options: [
+                "map.add(chave, valor);",
+                "map.put(chave, valor);",
+                "map.insert(chave, valor);",
+                "map.set(chave, valor);"
             ],
             correct: 1,
-            explanation: "Integer é a classe wrapper que permite que um número inteiro seja null."
+            explanation: "O método put() é usado para adicionar pares chave-valor em um HashMap."
+        },
+        {
+            question: "Qual é a diferença principal entre ArrayList e LinkedList?",
+            options: [
+                "ArrayList permite duplicatas, LinkedList não",
+                "ArrayList é mais rápido para acesso aleatório, LinkedList para inserções/remoções",
+                "ArrayList é thread-safe, LinkedList não",
+                "ArrayList só aceita números, LinkedList aceita qualquer tipo"
+            ],
+            correct: 1,
+            explanation: "ArrayList é melhor para acesso aleatório, enquanto LinkedList é melhor para inserções e remoções frequentes."
         }
     ];
 
@@ -141,18 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
             score++;
         }
 
-        // Mostrar explicação
+        // Mostrar explicação e aguardar antes de passar para próxima questão
+        const explanation = document.createElement('p');
+        explanation.className = 'explanation';
+        explanation.textContent = question.explanation;
+        questionContainer.querySelector('.question').appendChild(explanation);
+
         setTimeout(() => {
             currentQuestion++;
             showQuestion();
-        }, 1500);
+        }, 2000);
     }
 
     function showResults() {
         const percentage = (score / questions.length) * 100;
         const message = percentage >= 50 
             ? "Parabéns! Você está pronto para avançar para a próxima fase!"
-            : "Que tal revisar o conteúdo e tentar novamente?";
+            : "Que tal revisar o conteúdo sobre Collections e Exceptions e tentar novamente?";
 
         questionContainer.classList.add('hidden');
         resultContainer.classList.remove('hidden');

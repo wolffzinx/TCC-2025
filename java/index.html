@@ -1,125 +1,121 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeCrafters - Java</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>CodeCrafters - Java Journey</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Partículas de Background -->
+    <div id="particles-js"></div>
+
     <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a href="../index.html">
-                <i class="fas fa-chevron-left"></i>
-                CodeCrafters
-            </a>
-            <div class="java-logo">
-                <i class="fab fa-java"></i>
-                <div class="steam-container">
-                    <div class="steam"></div>
-                    <div class="steam"></div>
-                    <div class="steam"></div>
-                </div>
-            </div>
+    <nav class="navbar">
+        <div class="nav-logo" onclick="window.location.href='/'">
+            <span>CodeCrafters</span>
         </div>
-        <button id="themeToggle" class="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button>
+        
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
     </nav>
 
-    <!-- Main Content -->
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="coffee-cup">
+            <div class="steam"></div>
+            <div class="steam"></div>
+            <div class="steam"></div>
+        </div>
+        <h1>Jornada Java</h1>
+        <p>Desenvolva suas habilidades em Java através de desafios práticos</p>
+    </div>
+
+    <!-- Fases -->
     <div class="container">
-        <header>
-            <h1>
-                <i class="fab fa-java"></i>
-                Aprenda Java
-                <i class="fab fa-java"></i>
-            </h1>
-            <p class="subtitle">Domine a programação Java com nossos desafios interativos</p>
-        </header>
-
-        <!-- Levels Grid -->
-        <div class="levels-grid">
-            <!-- Fase 1 -->
-            <div class="level-card" onclick="window.location.href='/jogos/nivel1.html'">
-                <div class="card-glow"></div>
-                <div class="level-number">1</div>
-                <h2>Fundamentos</h2>
-                <p>Aprenda os conceitos básicos de Java e seu primeiro Hello World</p>
-                <div class="card-footer">
-                    <button class="play-button">
-                        <i class="fas fa-play"></i>
-                        Jogar
-                    </button>
+        <div class="phases-grid">
+            <div class="phase-card" onclick="window.location.href='jogos/nivel1.html'">
+                <div class="phase-content">
+                    <div class="phase-number">01</div>
+                    <h3>Fundamentos Java</h3>
+                    <p>Variáveis, loops, condicionais e arrays</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                    <div class="card-decoration">
+                        <i class="fas fa-coffee"></i>
+                    </div>
                 </div>
+                <div class="hover-effect"></div>
             </div>
 
-            <!-- Fase 2 -->
-            <div class="level-card" onclick="window.location.href='jogos/fase2/index.html'">
-                <div class="card-glow"></div>
-                <div class="level-number">2</div>
-                <h2>Variáveis e Tipos</h2>
-                <p>Explore os diferentes tipos de dados e variáveis em Java</p>
-                <div class="card-footer">
-                    <button class="play-button">
-                        <i class="fas fa-play"></i>
-                        Jogar
-                    </button>
+            <div class="phase-card" onclick="window.location.href='jogos/nivel2.html'">
+                <div class="phase-content">
+                    <div class="phase-number">02</div>
+                    <h3>POO Básico</h3>
+                    <p>Classes, objetos e encapsulamento</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                    <div class="card-decoration">
+                        <i class="fas fa-cube"></i>
+                    </div>
                 </div>
+                <div class="hover-effect"></div>
             </div>
 
-            <!-- Fase 3 -->
-            <div class="level-card" onclick="window.location.href='jogos/fase3/index.html'">
-                <div class="card-glow"></div>
-                <div class="level-number">3</div>
-                <h2>Estruturas de Controle</h2>
-                <p>Aprenda a controlar o fluxo do seu programa com condicionais e loops</p>
-                <div class="card-footer">
-                    <button class="play-button">
-                        <i class="fas fa-play"></i>
-                        Jogar
-                    </button>
+            <div class="phase-card" onclick="window.location.href='jogos/nivel3.html'">
+                <div class="phase-content">
+                    <div class="phase-number">03</div>
+                    <h3>Herança & Polimorfismo</h3>
+                    <p>Hierarquia de classes e interfaces</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                    <div class="card-decoration">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
                 </div>
+                <div class="hover-effect"></div>
             </div>
 
-            <!-- Fase 4 -->
-            <div class="level-card" onclick="window.location.href='jogos/fase4/index.html'">
-                <div class="card-glow"></div>
-                <div class="level-number">4</div>
-                <h2>Funções e Métodos</h2>
-                <p>Organize seu código criando funções e métodos reutilizáveis</p>
-                <div class="card-footer">
-                    <button class="play-button">
-                        <i class="fas fa-play"></i>
-                        Jogar
-                    </button>
+            <div class="phase-card" onclick="window.location.href='jogos/nivel4.html'">
+                <div class="phase-content">
+                    <div class="phase-number">04</div>
+                    <h3>Collections & Exceptions</h3>
+                    <p>Estruturas de dados e tratamento de erros</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                    <div class="card-decoration">
+                        <i class="fas fa-database"></i>
+                    </div>
                 </div>
+                <div class="hover-effect"></div>
             </div>
 
-            <!-- Fase 5 -->
-            <div class="level-card" onclick="window.location.href='jogos/fase5/index.html'">
-                <div class="card-glow"></div>
-                <div class="level-number">5</div>
-                <h2>Classes e Objetos</h2>
-                <p>Mergulhe na programação orientada a objetos com Java</p>
-                <div class="card-footer">
-                    <button class="play-button">
-                        <i class="fas fa-play"></i>
-                        Jogar
-                    </button>
+            <div class="phase-card" onclick="window.location.href='jogos/nivel5.html'">
+                <div class="phase-content">
+                    <div class="phase-number">05</div>
+                    <h3>Objetos</h3>
+                    <p>Mergulhe na programação orientada a objetos com Java</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 100%"></div>
+                    </div>
+                    <div class="card-decoration">
+                        <i class="fas fa-star"></i>
+                    </div>
                 </div>
+                <div class="hover-effect"></div>
             </div>
         </div>
     </div>
 
-    <!-- Particles Container -->
-    <div class="particles-container"></div>
-
-    <!-- Cursor Trail -->
-    <div class="cursor-trail"></div>
-
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

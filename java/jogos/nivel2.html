@@ -1,104 +1,64 @@
 <!DOCTYPE html>
-<html lang="pt-br" data-theme="dark">
+<html lang="pt-br" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Java - Variáveis e Tipos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>CodeCrafters - Quiz Java POO</title>
     <link rel="stylesheet" href="nivel2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">
-            <a href="../../index.html">
-                <i class="fas fa-chevron-left"></i>
-                Voltar
-            </a>
-            <div class="java-logo">
-                <i class="fab fa-java"></i>
-            </div>
+    <nav class="navbar">
+        <div class="nav-logo" onclick="window.location.href='../'">
+            <span>CodeCrafters</span>
         </div>
-        <button id="themeToggle" class="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
     </nav>
 
-    <!-- Conteúdo Principal -->
     <div class="container">
-        <!-- Seção de Estudo -->
-        <div id="studySection" class="section active">
-            <h1>Variáveis e Tipos em Java</h1>
-            <div class="content-card">
-                <h2>O que são Variáveis?</h2>
-                <p>Variáveis são espaços na memória que guardam dados. Pense nelas como caixas onde você pode guardar diferentes tipos de informações.</p>
-                
-                <h2>Tipos Principais:</h2>
-                <div class="type-grid">
-                    <div class="type-card">
-                        <h3>int</h3>
-                        <p>Números inteiros</p>
-                        <code>int idade = 25;</code>
-                    </div>
-                    <div class="type-card">
-                        <h3>double</h3>
-                        <p>Números decimais</p>
-                        <code>double altura = 1.75;</code>
-                    </div>
-                    <div class="type-card">
-                        <h3>String</h3>
-                        <p>Texto</p>
-                        <code>String nome = "João";</code>
-                    </div>
-                    <div class="type-card">
-                        <h3>boolean</h3>
-                        <p>Verdadeiro/Falso</p>
-                        <code>boolean ativo = true;</code>
-                    </div>
-                </div>
-
-                <h2>Regras Importantes:</h2>
+        <!-- Seção de Introdução -->
+        <div class="intro-section">
+            <h2>Variáveis e Tipos em Java</h2>
+            <div class="intro-content">
+                <p>Em Java, toda variável tem um tipo específico que determina que tipo de dado ela pode armazenar. Os tipos mais comuns são:</p>
                 <ul>
-                    <li>Variáveis precisam ser declaradas antes de usar</li>
-                    <li>O nome não pode começar com número</li>
-                    <li>Cada tipo guarda valores específicos</li>
-                    <li>Use nomes que façam sentido</li>
+                    <li><strong>int:</strong> números inteiros (ex: 1, -5, 1000)</li>
+                    <li><strong>double:</strong> números decimais (ex: 3.14, -2.5)</li>
+                    <li><strong>String:</strong> texto (ex: "Olá mundo")</li>
+                    <li><strong>boolean:</strong> verdadeiro ou falso (true/false)</li>
+                    <li><strong>char:</strong> caractere único (ex: 'a', '1', '$')</li>
                 </ul>
-
-                <div class="example-box">
-                    <h3>Exemplo Prático:</h3>
-                    <code>
-                        String nomeProduto = "Notebook";<br>
-                        double preco = 2599.99;<br>
-                        int quantidade = 5;<br>
-                        boolean disponivel = true;
-                    </code>
-                </div>
-
-                <button id="startQuiz" class="neon-button">
-                    Começar Quiz
-                    <i class="fas fa-arrow-right"></i>
-                </button>
+                <p>Para declarar uma variável, use a sintaxe: <code>tipo nomeVariavel = valor;</code></p>
+                <p>Exemplos:</p>
+                <pre>
+int idade = 25;
+double altura = 1.75;
+String nome = "João";
+boolean estudante = true;
+char letra = 'A';</pre>
+                <p>Lembre-se:</p>
+                <ul>
+                    <li>Strings usam aspas duplas (" ")</li>
+                    <li>char usa aspas simples (' ')</li>
+                    <li>Números decimais usam ponto, não vírgula</li>
+                    <li>Nomes de variáveis não podem começar com números</li>
+                </ul>
             </div>
+            <button class="start-quiz">Começar Quiz</button>
         </div>
 
-        <!-- Seção do Quiz -->
-        <div id="quizSection" class="section">
-            <div class="quiz-container">
-                <div class="quiz-header">
-                    <h2>Quiz: Variáveis e Tipos</h2>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                
-                <div id="questionContainer" class="question-container">
-                    <!-- Perguntas serão inseridas aqui via JavaScript -->
-                </div>
-
-                <div id="resultContainer" class="result-container hidden">
-                    <!-- Resultado será inserido aqui via JavaScript -->
-                </div>
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div class="quiz-section hidden">
+            <h2>Quiz - Variáveis e Tipos</h2>
+            <div class="question-container">
+                <!-- Perguntas serão inseridas aqui -->
+            </div>
+            <div class="result-container hidden">
+                <!-- Resultado será mostrado aqui -->
             </div>
         </div>
     </div>

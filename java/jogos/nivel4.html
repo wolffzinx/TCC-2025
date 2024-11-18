@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters - Collections e Exceptions</title>
+    <link rel="stylesheet" href="nivel4.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo" onclick="window.location.href='../'">
+            <span>CodeCrafters</span>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Seção de Introdução -->
+        <div class="intro-section">
+            <h2>Collections e Exceptions em Java</h2>
+            <div class="intro-content">
+                <h3>Collections</h3>
+                <p>Collections são estruturas que armazenam e organizam dados. As principais são:</p>
+                <ul>
+                    <li><strong>ArrayList:</strong> Lista dinâmica que pode crescer/diminuir
+                        <pre>ArrayList<String> lista = new ArrayList<>();
+lista.add("item");</pre>
+                    </li>
+                    <li><strong>HashSet:</strong> Conjunto que não permite duplicatas
+                        <pre>HashSet<Integer> conjunto = new HashSet<>();
+conjunto.add(1);</pre>
+                    </li>
+                    <li><strong>HashMap:</strong> Armazena pares chave-valor
+                        <pre>HashMap<String, Integer> mapa = new HashMap<>();
+mapa.put("chave", 1);</pre>
+                    </li>
+                </ul>
+
+                <h3>Exceptions</h3>
+                <p>Exceptions são erros que podem ocorrer durante a execução. Tratamos com try-catch:</p>
+                <pre>try {
+    // código que pode gerar erro
+} catch (Exception e) {
+    // tratamento do erro
+}</pre>
+                <p>Principais exceptions:</p>
+                <ul>
+                    <li><strong>NullPointerException:</strong> Ao tentar acessar objeto null</li>
+                    <li><strong>ArrayIndexOutOfBoundsException:</strong> Índice inválido em array</li>
+                    <li><strong>NumberFormatException:</strong> Erro ao converter String para número</li>
+                </ul>
+            </div>
+            <button class="start-quiz">Começar Quiz</button>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div class="quiz-section hidden">
+            <h2>Quiz - Collections e Exceptions</h2>
+            <div class="question-container">
+                <!-- Perguntas serão inseridas aqui -->
+            </div>
+            <div class="result-container hidden">
+                <!-- Resultado será mostrado aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel4.js"></script>
+</body>
+</html>

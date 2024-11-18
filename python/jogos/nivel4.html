@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Funções e Módulos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel4.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+            <div class="python-logo">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h2>Funções e Módulos em Python</h2>
+            <div class="content">
+                <p>Funções são blocos de código reutilizáveis que executam uma tarefa específica. Módulos são arquivos Python que contêm funções, variáveis e classes que podemos usar em outros programas.</p>
+                
+                <h3>Definindo Funções:</h3>
+                <pre>
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+# Chamando a função
+mensagem = saudacao("Ana")
+print(mensagem)  # Saída: Olá, Ana!
+                </pre>
+
+                <h3>Módulos Comuns:</h3>
+                <ul>
+                    <li><strong>math</strong>: Funções matemáticas (sqrt, cos, sin)</li>
+                    <li><strong>random</strong>: Geração de números aleatórios</li>
+                    <li><strong>datetime</strong>: Manipulação de datas e horas</li>
+                </ul>
+
+                <h3>Importando Módulos:</h3>
+                <pre>
+import math
+raiz = math.sqrt(16)  # 4.0
+
+from random import randint
+numero = randint(1, 10)  # número aleatório entre 1 e 10
+                </pre>
+
+                <div class="start-quiz">
+                    <p>Pronto para testar seus conhecimentos?</p>
+                    <button id="startQuizBtn" class="btn">Começar Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <h2>Quiz: Funções e Módulos</h2>
+            <div class="quiz-container">
+                <div id="question" class="question">
+                    <!-- Pergunta será inserida aqui -->
+                </div>
+                <div id="options" class="options">
+                    <!-- Opções serão inseridas aqui -->
+                </div>
+                <div class="quiz-footer">
+                    <span id="questionNumber">Pergunta 1/7</span>
+                    <button id="nextBtn" class="btn" disabled>Próxima</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <h2>Resultado do Quiz</h2>
+            <div class="result-container">
+                <div id="score" class="score">
+                    <!-- Pontuação será inserida aqui -->
+                </div>
+                <div id="feedback" class="feedback">
+                    <!-- Feedback será inserido aqui -->
+                </div>
+                <div class="result-buttons">
+                    <button id="retryBtn" class="btn">Tentar Novamente</button>
+                    <button id="menuBtn" class="btn">Voltar ao Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel4.js"></script>
+</body>
+</html>

@@ -1,0 +1,326 @@
+:root[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --bg-editor: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --neon-yellow: #ffd700;
+    --neon-glow: rgba(255, 215, 0, 0.5);
+    --neon-dim: rgba(255, 215, 0, 0.2);
+    --card-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    --console-bg: #2d2d2d;
+    --console-text: #ffffff;
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+:root[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-card: #ffffff;
+    --bg-editor: #f8f8f8;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --neon-yellow: #f7df1e;
+    --neon-glow: rgba(247, 223, 30, 0.5);
+    --neon-dim: rgba(247, 223, 30, 0.2);
+    --card-shadow: 0 0 20px rgba(247, 223, 30, 0.2);
+    --console-bg: #1e1e1e;
+    --console-text: #ffffff;
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Navbar */
+nav {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--neon-yellow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo a {
+    color: var(--neon-yellow);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.js-logo {
+    color: var(--neon-yellow);
+    font-size: 1.5rem;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+/* Challenge Section */
+.challenge-section {
+    width: 33.33%;
+    background: var(--bg-card);
+    border-right: 1px solid var(--neon-yellow);
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.challenge-content h2 {
+    color: var(--neon-yellow);
+    margin-bottom: 1.5rem;
+}
+
+/* Explanation Section */
+.explanation {
+    margin-bottom: 2rem;
+}
+
+.explanation-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+.explanation-text code {
+    background: var(--bg-primary);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    color: var(--neon-yellow);
+}
+
+/* Task Section */
+.task {
+    background: var(--bg-primary);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border: 1px solid var(--neon-yellow);
+}
+
+.task h3 {
+    color: var(--neon-yellow);
+    margin-bottom: 1rem;
+}
+
+.task-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Help Buttons */
+.help-buttons {
+    margin-bottom: 2rem;
+}
+
+.tip-btn {
+    background: transparent;
+    color: var(--neon-yellow);
+    border: 1px solid var(--neon-yellow);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s;
+}
+
+.tip-btn:hover {
+    background: var(--neon-yellow);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+.tip-counter {
+    background: var(--bg-primary);
+    color: var(--neon-yellow);
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.tip-container {
+    margin-top: 1rem;
+}
+
+.tip {
+    background: var(--bg-primary);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--neon-yellow);
+    animation: slideIn 0.3s ease;
+}
+
+/* Navigation Buttons */
+.next-btn, .menu-btn {
+    background: transparent;
+    color: var(--neon-yellow);
+    border: 1px solid var(--neon-yellow);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.3s;
+}
+
+.next-btn:hover, .menu-btn:hover {
+    background: var(--neon-yellow);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+/* Editor Section */
+.editor-section {
+    width: 33.33%;
+    background: var(--bg-editor);
+    border-right: 1px solid var(--neon-yellow);
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    padding: 1rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--neon-yellow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.editor-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+#codeEditor {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'Consolas', monospace;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+}
+
+.run-btn {
+    background: var(--neon-yellow);
+    color: var(--bg-primary);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.run-btn:hover {
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+/* Console Section */
+.console-section {
+    width: 33.33%;
+    background: var(--console-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.console-header button {
+    background: transparent;
+    color: var(--console-text);
+    border: 1px solid var(--console-text);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.console-content {
+    flex: 1;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    color: var(--console-text);
+    overflow-y: auto;
+}
+
+.success {
+    color: var(--success);
+}
+
+.error {
+    color: var(--error);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .challenge-section,
+    .editor-section,
+    .console-section {
+        width: 100%;
+        height: 33.33vh;
+    }
+}

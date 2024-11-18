@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C - Arrays e Ponteiros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel5.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+        </div>
+        <div class="nav-title">Fase 5: Arrays e Ponteiros</div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h1>Arrays e Ponteiros em C</h1>
+            
+            <div class="content">
+                <h2>Arrays em C</h2>
+                <p>Arrays são coleções de elementos do mesmo tipo, armazenados em sequência na memória.</p>
+
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h3>Array Unidimensional</h3>
+                        <p>Vetor simples de elementos</p>
+                        <code>int numeros[5] = {1, 2, 3, 4, 5};</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Array Bidimensional</h3>
+                        <p>Matriz com linhas e colunas</p>
+                        <code>int matriz[2][3] = {
+    {1, 2, 3},
+    {4, 5, 6}
+};</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Acesso aos Elementos</h3>
+                        <p>Usando índices</p>
+                        <code>int primeiro = numeros[0];
+int elemento = matriz[1][2];</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Tamanho do Array</h3>
+                        <p>Definido na declaração</p>
+                        <code>int tamanho = sizeof(numeros) / sizeof(int);</code>
+                    </div>
+                </div>
+
+                <h2>Ponteiros em C</h2>
+                <p>Ponteiros são variáveis que armazenam endereços de memória de outras variáveis.</p>
+
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h3>Declaração</h3>
+                        <p>Usando asterisco (*)</p>
+                        <code>int* ptr;
+int valor = 10;
+ptr = &valor;</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Dereferenciamento</h3>
+                        <p>Acessando o valor apontado</p>
+                        <code>int valor = *ptr;
+*ptr = 20; // Modifica o valor</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Aritmética</h3>
+                        <p>Navegando na memória</p>
+                        <code>ptr++; // Próximo elemento
+ptr--; // Elemento anterior</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Arrays e Ponteiros</h3>
+                        <p>Relação próxima</p>
+                        <code>int* p = numeros; // Array decai para ponteiro
+int primeiro = *p; // Primeiro elemento</code>
+                    </div>
+                </div>
+
+                <h2>Regras Importantes:</h2>
+                <ul>
+                    <li>Arrays começam no índice 0</li>
+                    <li>Ponteiros não inicializados apontam para lugar indefinido</li>
+                    <li>Sempre inicialize ponteiros antes de usar</li>
+                    <li>Cuidado com acesso fora dos limites do array</li>
+                    <li>Arrays são passados como ponteiros para funções</li>
+                </ul>
+
+                <h2>Exemplos Práticos:</h2>
+                <pre>
+// Trabalhando com Arrays
+int numeros[5] = {1, 2, 3, 4, 5};
+for(int i = 0; i < 5; i++) {
+    printf("%d ", numeros[i]);
+}
+
+// Trabalhando com Ponteiros
+int x = 10;
+int* ptr = &x;
+printf("Valor: %d\n", *ptr);
+printf("Endereço: %p\n", (void*)ptr);
+
+// Arrays e Ponteiros juntos
+int* p = numeros;
+for(int i = 0; i < 5; i++) {
+    printf("%d ", *(p + i));
+}</pre>
+
+                <div class="warning-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Dica: Arrays e ponteiros têm uma relação muito próxima em C. Quando você passa um array para uma função, na verdade está passando um ponteiro para seu primeiro elemento!</p>
+                </div>
+            </div>
+
+            <button id="startQuiz" class="btn">
+                Começar Quiz
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <div class="quiz-header">
+                <h2>Quiz: Arrays e Ponteiros</h2>
+                <div class="progress">
+                    Questão <span id="currentQuestion">1</span>/7
+                </div>
+            </div>
+
+            <div id="questionContainer" class="question-container">
+                <!-- Questões serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <!-- Resultado será inserido aqui via JavaScript -->
+        </div>
+    </div>
+
+    <script src="nivel5.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C - Estruturas de Controle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel3.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+        </div>
+        <div class="nav-title">Nível 3: Exercício 1/3</div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Painel de Instruções -->
+        <div class="panel instructions">
+            <div class="content">
+                <h2>Estruturas de Controle em C</h2>
+                <div class="explanation">
+                    <p>Em C, usamos estruturas de controle para tomar decisões:</p>
+                    <pre>
+if (condição) {
+    // código se verdadeiro
+} else {
+    // código se falso
+}
+
+// Exemplo:
+if (idade >= 18) {
+    printf("Maior de idade");
+} else {
+    printf("Menor de idade");
+}</pre>
+                    <div class="task">
+                        <h3>Sua Tarefa:</h3>
+                        <p>Crie um programa que verifica se um número é positivo ou negativo usando if/else.</p>
+                        <p>Se o número for positivo, imprima "Positivo", se for negativo, imprima "Negativo".</p>
+                        <p>Use o número 5 para teste.</p>
+                    </div>
+
+                    <div id="dicas"></div>
+                    <button id="tipBtn" class="btn">Dica <span>(3 restantes)</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Editor de Código -->
+        <div class="panel editor">
+            <div class="editor-header">
+                <span>Digite seu código:</span>
+                <button id="runBtn" class="btn">
+                    <i class="fas fa-play"></i> Executar
+                </button>
+            </div>
+            <textarea id="codeEditor" spellcheck="false">// Seu código aqui</textarea>
+        </div>
+
+        <!-- Painel de Saída -->
+        <div class="panel output">
+            <div class="output-header">
+                <span>Saída:</span>
+                <button id="clearBtn" class="btn">
+                    <i class="fas fa-broom"></i> Limpar
+                </button>
+            </div>
+            <div id="outputText" class="output-content"></div>
+            <div class="button-container">
+                <button id="nextBtn" class="btn next-btn" style="display: none;">
+                    Próximo Exercício (2/3)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel3.js"></script>
+</body>
+</html>

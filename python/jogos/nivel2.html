@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Variáveis e Tipos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel2.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+            <div class="python-logo">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h2>Variáveis e Tipos em Python</h2>
+            <div class="content">
+                <p>Em Python, variáveis são como caixas onde guardamos diferentes tipos de informação. Não precisamos declarar o tipo da variável - Python faz isso automaticamente!</p>
+                
+                <h3>Tipos Principais:</h3>
+                <ul>
+                    <li><strong>str (string)</strong>: Texto entre aspas - "Olá" ou 'Python'</li>
+                    <li><strong>int (inteiro)</strong>: Números inteiros - 42, -10, 0</li>
+                    <li><strong>float (decimal)</strong>: Números com decimal - 3.14, -0.001</li>
+                    <li><strong>bool (booleano)</strong>: True ou False</li>
+                </ul>
+
+                <h3>Exemplos:</h3>
+                <pre>
+nome = "Ana"          # string
+idade = 25           # inteiro
+altura = 1.65        # float
+python_legal = True  # booleano
+                </pre>
+
+                <p>Para verificar o tipo de uma variável, use: type(variavel)</p>
+                
+                <div class="start-quiz">
+                    <p>Pronto para testar seus conhecimentos?</p>
+                    <button id="startQuizBtn" class="btn">Começar Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <h2>Quiz: Variáveis e Tipos</h2>
+            <div class="quiz-container">
+                <div id="question" class="question">
+                    <!-- Pergunta será inserida aqui -->
+                </div>
+                <div id="options" class="options">
+                    <!-- Opções serão inseridas aqui -->
+                </div>
+                <div class="quiz-footer">
+                    <span id="questionNumber">Pergunta 1/7</span>
+                    <button id="nextBtn" class="btn" disabled>Próxima</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <h2>Resultado do Quiz</h2>
+            <div class="result-container">
+                <div id="score" class="score">
+                    <!-- Pontuação será inserida aqui -->
+                </div>
+                <div id="feedback" class="feedback">
+                    <!-- Feedback será inserido aqui -->
+                </div>
+                <div class="result-buttons">
+                    <button id="retryBtn" class="btn">Tentar Novamente</button>
+                    <button id="menuBtn" class="btn">Voltar ao Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel2.js"></script>
+</body>
+</html>

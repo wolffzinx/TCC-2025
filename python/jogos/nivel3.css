@@ -1,0 +1,281 @@
+:root[data-theme="dark"] {
+    --bg-primary: #1a1a2e;
+    --bg-card: #16213e;
+    --bg-editor: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #a7a7a7;
+    --python-blue: #306998;
+    --python-yellow: #ffd43b;
+    --python-glow: rgba(48, 105, 152, 0.5);
+    --python-dim: rgba(48, 105, 152, 0.2);
+    --card-shadow: 0 0 20px rgba(48, 105, 152, 0.3);
+    --console-bg: #2d2d2d;
+    --console-text: #ffffff;
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+:root[data-theme="light"] {
+    --bg-primary: #f0f0f0;
+    --bg-card: #ffffff;
+    --bg-editor: #f8f8f8;
+    --text-primary: #16213e;
+    --text-secondary: #444444;
+    --python-blue: #306998;
+    --python-yellow: #ffd43b;
+    --python-glow: rgba(48, 105, 152, 0.5);
+    --python-dim: rgba(48, 105, 152, 0.2);
+    --card-shadow: 0 0 20px rgba(48, 105, 152, 0.2);
+    --console-bg: #1e1e1e;
+    --console-text: #ffffff;
+    --success: #4caf50;
+    --error: #f44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Navbar */
+nav {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--python-blue);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo a {
+    color: var(--python-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.python-logo {
+    color: var(--python-blue);
+    font-size: 1.5rem;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+/* Challenge Section */
+.challenge-section {
+    width: 33.33%;
+    background: var(--bg-card);
+    padding: 2rem;
+    overflow-y: auto;
+    border-right: 1px solid var(--python-dim);
+}
+
+.challenge-content h2 {
+    color: var(--python-blue);
+    margin-bottom: 1.5rem;
+}
+
+.explanation {
+    margin-bottom: 2rem;
+}
+
+.explanation-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.task {
+    margin-bottom: 2rem;
+}
+
+.task h3 {
+    color: var(--python-yellow);
+    margin-bottom: 1rem;
+}
+
+.task-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Help Section */
+.help-section {
+    margin-bottom: 2rem;
+}
+
+.tip-btn {
+    background: transparent;
+    color: var(--python-blue);
+    border: 1px solid var(--python-blue);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tip-btn:hover {
+    background: var(--python-blue);
+    color: white;
+}
+
+.tip-content {
+    color: var(--text-secondary);
+    padding: 1rem;
+    border-left: 3px solid var(--python-blue);
+    margin-left: 1rem;
+    display: none;
+}
+
+/* Editor Section */
+.editor-section {
+    width: 33.33%;
+    background: var(--bg-editor);
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    padding: 1rem;
+    background: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--python-dim);
+}
+
+.run-btn {
+    background: var(--python-blue);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.editor-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+#codeEditor {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    font-family: 'Consolas', monospace;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+}
+
+/* Console Section */
+.console-section {
+    width: 33.33%;
+    background: var(--console-bg);
+    display: flex;
+    flex-direction: column;
+}
+
+.console-header {
+    padding: 1rem;
+    background: var(--bg-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.console-header button {
+    background: transparent;
+    color: var(--console-text);
+    border: 1px solid var(--console-text);
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.console-content {
+    flex: 1;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    color: var(--console-text);
+    overflow-y: auto;
+}
+
+/* Navigation Buttons */
+.next-btn, .menu-btn {
+    background: var(--python-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.next-btn:hover, .menu-btn:hover {
+    background: var(--python-yellow);
+    color: var(--bg-primary);
+}
+
+/* Success and Error Messages */
+.success {
+    color: var(--success);
+}
+
+.error {
+    color: var(--error);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .game-container {
+        flex-direction: column;
+    }
+
+    .challenge-section,
+    .editor-section,
+    .console-section {
+        width: 100%;
+        height: 33.33vh;
+    }
+}

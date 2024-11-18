@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C - Funções</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel4.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+        </div>
+        <div class="nav-title">Fase 4: Funções</div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h1>Funções em C</h1>
+            
+            <div class="content">
+                <h2>O que são Funções?</h2>
+                <p>Funções são blocos de código que realizam tarefas específicas. Elas ajudam a organizar e reutilizar código.</p>
+
+                <h2>Estrutura de uma Função:</h2>
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h3>Função sem retorno</h3>
+                        <p>Usa void quando não retorna valor</p>
+                        <code>void saudacao() {
+    printf("Olá!");
+}</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Função com retorno</h3>
+                        <p>Especifica o tipo do retorno</p>
+                        <code>int soma(int a, int b) {
+    return a + b;
+}</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Função com parâmetros</h3>
+                        <p>Recebe dados para processar</p>
+                        <code>float media(float n1, float n2) {
+    return (n1 + n2) / 2;
+}</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>Chamada de função</h3>
+                        <p>Como usar a função</p>
+                        <code>int resultado = soma(5, 3);
+printf("%d", resultado);</code>
+                    </div>
+                </div>
+
+                <h2>Regras Importantes:</h2>
+                <ul>
+                    <li>Declare a função antes de usá-la</li>
+                    <li>O tipo de retorno deve corresponder ao declarado</li>
+                    <li>Parâmetros são opcionais</li>
+                    <li>Use return para retornar valores</li>
+                    <li>Funções void não precisam de return</li>
+                </ul>
+
+                <h2>Exemplos Práticos:</h2>
+                <pre>
+// Função que calcula área do retângulo
+float calcularArea(float base, float altura) {
+    return base * altura;
+}
+
+// Função que imprime mensagem
+void mostrarMenu() {
+    printf("1. Iniciar\n");
+    printf("2. Configurar\n");
+    printf("3. Sair\n");
+}
+
+// Função que verifica número par
+int ehPar(int numero) {
+    return numero % 2 == 0;
+}
+
+// Como usar:
+float area = calcularArea(10.0, 5.0);
+mostrarMenu();
+if (ehPar(4)) {
+    printf("É par!");
+}</pre>
+
+                <div class="warning-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Dica: Funções tornam seu código mais organizado e reutilizável. Use nomes descritivos que indiquem claramente o que a função faz!</p>
+                </div>
+            </div>
+
+            <button id="startQuiz" class="btn">
+                Começar Quiz
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <div class="quiz-header">
+                <h2>Quiz: Funções em C</h2>
+                <div class="progress">
+                    Questão <span id="currentQuestion">1</span>/7
+                </div>
+            </div>
+
+            <div id="questionContainer" class="question-container">
+                <!-- Questões serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <!-- Resultado será inserido aqui via JavaScript -->
+        </div>
+    </div>
+
+    <script src="nivel4.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeCrafters - JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../index.html">
+                <i class="fas fa-chevron-left"></i>
+                CodeCrafters
+            </a>
+            <div class="js-logo">
+                <i class="fab fa-js"></i>
+                <div class="glow-container">
+                    <div class="glow"></div>
+                    <div class="glow"></div>
+                    <div class="glow"></div>
+                </div>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>
+                <i class="fab fa-js"></i>
+                Aprenda JavaScript
+                <i class="fab fa-js"></i>
+            </h1>
+            <p class="subtitle">Domine a programação JavaScript com nossos desafios interativos</p>
+        </header>
+
+        <!-- Levels Grid -->
+        <div class="levels-grid">
+            <!-- Fase 1 -->
+            <div class="level-card" onclick="window.location.href='jogos/nivel1.html'">
+                <div class="card-glow"></div>
+                <div class="level-number">1</div>
+                <h2>Fundamentos</h2>
+                <p>Aprenda os conceitos básicos de JavaScript e seu primeiro Hello World</p>
+                <div class="card-footer">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Jogar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fase 2 -->
+            <div class="level-card" onclick="window.location.href='jogos/nivel2.html'">
+                <div class="card-glow"></div>
+                <div class="level-number">2</div>
+                <h2>Variáveis e Tipos</h2>
+                <p>Explore os diferentes tipos de dados e variáveis em JavaScript</p>
+                <div class="card-footer">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Jogar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fase 3 -->
+            <div class="level-card" onclick="window.location.href='jogos/nivel3.html'">
+                <div class="card-glow"></div>
+                <div class="level-number">3</div>
+                <h2>Estruturas de Controle</h2>
+                <p>Aprenda a controlar o fluxo do seu programa com condicionais e loops</p>
+                <div class="card-footer">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Jogar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fase 4 -->
+            <div class="level-card" onclick="window.location.href='jogos/nivel4.html'">
+                <div class="card-glow"></div>
+                <div class="level-number">4</div>
+                <h2>Funções</h2>
+                <p>Organize seu código criando funções reutilizáveis</p>
+                <div class="card-footer">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Jogar
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fase 5 -->
+            <div class="level-card" onclick="window.location.href='jogos/nivel5.html'">
+                <div class="card-glow"></div>
+                <div class="level-number">5</div>
+                <h2>DOM e Eventos</h2>
+                <p>Aprenda a manipular elementos HTML e responder a eventos</p>
+                <div class="card-footer">
+                    <button class="play-button">
+                        <i class="fas fa-play"></i>
+                        Jogar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles Container -->
+    <div class="particles-container"></div>
+
+    <!-- Cursor Trail -->
+    <div class="cursor-trail"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

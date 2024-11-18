@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java - Variáveis e Tipos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel2.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+            <div class="java-logo">
+                <i class="fab fa-java"></i>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Estudo -->
+        <div id="studySection" class="section active">
+            <h1>Variáveis e Tipos em Java</h1>
+            <div class="content-card">
+                <h2>O que são Variáveis?</h2>
+                <p>Variáveis são espaços na memória que guardam dados. Pense nelas como caixas onde você pode guardar diferentes tipos de informações.</p>
+                
+                <h2>Tipos Principais:</h2>
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h3>int</h3>
+                        <p>Números inteiros</p>
+                        <code>int idade = 25;</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>double</h3>
+                        <p>Números decimais</p>
+                        <code>double altura = 1.75;</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>String</h3>
+                        <p>Texto</p>
+                        <code>String nome = "João";</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>boolean</h3>
+                        <p>Verdadeiro/Falso</p>
+                        <code>boolean ativo = true;</code>
+                    </div>
+                </div>
+
+                <h2>Regras Importantes:</h2>
+                <ul>
+                    <li>Variáveis precisam ser declaradas antes de usar</li>
+                    <li>O nome não pode começar com número</li>
+                    <li>Cada tipo guarda valores específicos</li>
+                    <li>Use nomes que façam sentido</li>
+                </ul>
+
+                <div class="example-box">
+                    <h3>Exemplo Prático:</h3>
+                    <code>
+                        String nomeProduto = "Notebook";<br>
+                        double preco = 2599.99;<br>
+                        int quantidade = 5;<br>
+                        boolean disponivel = true;
+                    </code>
+                </div>
+
+                <button id="startQuiz" class="neon-button">
+                    Começar Quiz
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Seção do Quiz -->
+        <div id="quizSection" class="section">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h2>Quiz: Variáveis e Tipos</h2>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+                
+                <div id="questionContainer" class="question-container">
+                    <!-- Perguntas serão inseridas aqui via JavaScript -->
+                </div>
+
+                <div id="resultContainer" class="result-container hidden">
+                    <!-- Resultado será inserido aqui via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel2.js"></script>
+</body>
+</html>

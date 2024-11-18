@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C - Variáveis e Tipos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel2.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+        </div>
+        <div class="nav-title">Fase 2: Variáveis e Tipos</div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h1>Variáveis e Tipos em C</h1>
+            
+            <div class="content">
+                <h2>O que são Variáveis?</h2>
+                <p>Variáveis são espaços na memória onde guardamos informações. Pense nelas como caixas etiquetadas onde podemos guardar diferentes tipos de dados.</p>
+
+                <h2>Principais Tipos em C:</h2>
+                <div class="type-grid">
+                    <div class="type-card">
+                        <h3>int</h3>
+                        <p>Números inteiros</p>
+                        <code>int idade = 25;</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>float</h3>
+                        <p>Números decimais</p>
+                        <code>float peso = 70.5;</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>char</h3>
+                        <p>Caracteres únicos</p>
+                        <code>char letra = 'A';</code>
+                    </div>
+                    <div class="type-card">
+                        <h3>double</h3>
+                        <p>Decimais precisos</p>
+                        <code>double pi = 3.14159;</code>
+                    </div>
+                </div>
+
+                <h2>Regras Importantes:</h2>
+                <ul>
+                    <li>Toda variável precisa ter um tipo definido</li>
+                    <li>O nome não pode começar com número</li>
+                    <li>Não use espaços no nome da variável</li>
+                    <li>Declare a variável antes de usá-la</li>
+                    <li>Use nomes significativos para suas variáveis</li>
+                </ul>
+
+                <h2>Exemplos Práticos:</h2>
+                <pre>
+// Declaração e inicialização de variáveis
+int numero = 10;          // Número inteiro
+float altura = 1.75;      // Número decimal
+char inicial = 'J';       // Caractere único
+double preco = 99.99;     // Decimal preciso
+
+// Exemplos de nomes válidos
+int idade;
+float mediaFinal;
+char primeiraLetra;
+double salarioBase;
+
+// Exemplos de nomes inválidos
+int 1numero;      // Não pode começar com número
+float media final; // Não pode ter espaço
+char @letra;      // Não pode usar caracteres especiais
+                </pre>
+
+                <div class="warning-box">
+                    <i class="fas fa-lightbulb"></i>
+                    <p>Dica: O tipo da variável determina que tipo de dado ela pode guardar e quanto espaço ocupa na memória. Escolha sempre o tipo mais adequado para sua necessidade!</p>
+                </div>
+            </div>
+
+            <button id="startQuiz" class="btn">
+                Começar Quiz
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <div class="quiz-header">
+                <h2>Quiz: Variáveis e Tipos</h2>
+                <div class="progress">
+                    Questão <span id="currentQuestion">1</span>/7
+                </div>
+            </div>
+
+            <div id="questionContainer" class="question-container">
+                <!-- Questões serão inseridas aqui via JavaScript -->
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <!-- Resultado será inserido aqui via JavaScript -->
+        </div>
+    </div>
+
+    <script src="nivel2.js"></script>
+</body>
+</html>

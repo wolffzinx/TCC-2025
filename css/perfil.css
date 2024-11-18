@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('header.css');
+@import url('home.css');
+@import url('menu.css');
+@import url('testimonials.css');
+@import url('footer.css');
+
+:root {
+  --color-primary-1: #fdeeee;
+  --color-primary-2: #fdeeee;
+  --color-primary-3: #09e918;
+  --color-primary-4: #09e918;
+  --color-primary-5: #09e918;
+  --color-primary-6: #09e918;
+
+  --color-neutral-0: #fff;
+  --color-neutral-1: #1d1d1d;
+
+  /* Variável para a cor do texto */
+  --color-text: #1d1d1d;
+}
+:root.dark-mode {
+  --color-primary-1: #1d1d1d;
+  --color-primary-2: #2b2b2b;
+  --color-primary-3: #09e918;
+  --color-primary-4: #09e918;
+  --color-primary-5: #09e918;
+  --color-primary-6: #09e918;
+  --color-neutral-0: #2b2b2b;
+  --color-neutral-1: #fff;
+
+  /* Cor do texto para o modo escuro */
+  --color-text: #fff;
+}
+
+
+/* Aplicação da cor do texto em elementos de texto */
+body {
+    background-color: var(--color-primary-1);
+    color: var(--color-text);
+}
+
+.nav-item a,
+.section-title,
+.section-subtitle,
+#cta .title,
+#cta_buttons a,
+.social-media-buttons a,
+.dish-description,
+.feedback-content p,
+#nav_logo {
+    color: var(--color-text);
+}
+
+/* Estilos para o botão de troca de tema */
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+    margin-left: 15px;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-primary-1);
+}
+
+section {
+    padding: 28px 8%;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-5);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-3);
+}
+
+.social-media-buttons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: var(--color-neutral-0);
+    font-size: 1.25rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--color-neutral-1);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: var(--color-primary-6);
+    font-size: 1.563rem;
+}
+
+.section-subtitle {
+    font-size: 2.1875rem;
+}
+
+/* Restante do código permanece conforme enviado. */
+
+
+header {
+  width: 100%;
+  padding: 28px 8%;
+  position: sticky;
+  top: 0;
+  background-color: var(--color-primary-1);
+  z-index: 3;
+}
+
+#navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav_logo {
+  font-size: 24px;
+  color: var(--color-primary-6);
+}
+
+#nav_list {
+  display: flex;
+  list-style: none;
+  gap: 48px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #1d1d1dad;
+  font-weight: 600;
+}
+
+.nav-item.active a {
+  color: var(--color-neutral-1);
+  border-bottom: 3px solid var(--color-primary-4);
+}
+
+/* Botão de troca de tema */
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+  margin-left: 15px;
+}
+
+#mobile_btn {
+  display: none;
+}
+
+@media screen and (max-width: 1170px) {
+  #nav_list,
+  #navbar .btn-default {
+      display: none;
+  }
+
+  #mobile_btn {
+      display: block;
+      border: none;
+      background-color: transparent;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+}
+
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary-3);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.perfil {
+  flex: 1 1 300px;
+  max-width: 500px;
+  padding: 1.5rem;
+  text-align: center;
+  background-color: var(--color-primary-1);
+}
+
+.perfil__avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.perfil__nombre,
+.perfil__minibio h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--color-primary-3);
+}
+
+.perfil__titulo,
+.perfil__minibio h3 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.perfil__boton {
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  background-color: var(--color-neutral-1);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+}
+
+.estadistica--perfil {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.estadistica--perfil h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.25rem;
+}
+
+.estadistica--perfil span {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.perfil__minibio {
+  margin-top: 1.5rem;
+}
+
+.ubicacion--perfil {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+
+.ubicacion--perfil i {
+  font-size: 1.5rem;
+  color: var(--color-primary-4);
+}
+
+.articulos {
+  flex: 1 1 300px;
+  max-width: 500px;
+  padding: 1.5rem;
+}
+
+.articulo {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-primary-3);
+}
+
+.articulo__categoria {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-primary-4);
+}
+
+.articulo__titulo {
+  font-size: 1.25rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: var(--color-neutral-1);
+  margin: 0.5rem 0;
+}
+
+.articulo__descripcion {
+  color: var(--color-text);
+  font-size: 1rem;
+}
+footer {
+  width: 100%;
+  background-color: var(--color-primary-2);
+  padding: 20px 8%;
+}
+
+#footer_items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#copyright {
+  color: var(--color-text);
+  font-size: 1.2rem;
+}
+
+.social-media-buttons {
+  display: flex;
+  gap: 18px;
+}
+
+.social-media-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 40px;
+  background-color: var(--color-neutral-0);
+  font-size: 1.25rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-neutral-1);
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow .3s ease;
+}
+
+.social-media-buttons a:hover {
+  box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para tablets */
+@media screen and (max-width: 768px) {
+  #nav_list {
+      flex-direction: column;
+      gap: 16px;
+  }
+
+  .section-title {
+      font-size: 1.25rem;
+  }
+
+  .section-subtitle {
+      font-size: 1.5rem;
+  }
+
+  .perfil, .articulos {
+      width: 100%;
+      padding: 20px;
+  }
+
+  .estadistica--perfil, .ubicacion--perfil {
+      width: 90%;
+      margin: 20px auto;
+  }
+
+  .articulo__titulo {
+      font-size: 1.25rem;
+  }
+
+  #footer_items {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .social-media-buttons {
+      justify-content: center;
+      gap: 10px;
+  }
+}
+
+/* Responsividade para smartphones */
+@media screen and (max-width: 480px) {
+  header {
+      padding: 20px;
+  }
+
+  #nav_logo {
+      font-size: 1.5rem;
+  }
+
+  .btn-default {
+      padding: 8px 12px;
+  }
+
+  .perfil__nombre, .perfil__titulo {
+      font-size: 1rem;
+  }
+
+  .articulo__categoria {
+      font-size: 0.875rem;
+  }
+
+  .articulo__titulo {
+      font-size: 1rem;
+  }
+
+  footer {
+      padding: 10px;
+  }
+
+  #copyright {
+      font-size: 1rem;
+  }
+}

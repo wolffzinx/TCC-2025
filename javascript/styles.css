@@ -1,0 +1,319 @@
+:root[data-theme="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --neon-yellow: #ffd700;
+    --neon-glow: rgba(255, 215, 0, 0.5);
+    --neon-dim: rgba(255, 215, 0, 0.2);
+    --card-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+:root[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-card: #ffffff;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --neon-yellow: #f7df1e;
+    --neon-glow: rgba(247, 223, 30, 0.5);
+    --neon-dim: rgba(247, 223, 30, 0.2);
+    --card-shadow: 0 0 20px rgba(247, 223, 30, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px var(--neon-dim);
+    border-bottom: 1px solid var(--neon-yellow);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo a {
+    color: var(--neon-yellow);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: text-shadow 0.3s;
+}
+
+.logo a:hover {
+    text-shadow: 0 0 10px var(--neon-yellow);
+}
+
+.js-logo {
+    position: relative;
+    color: var(--neon-yellow);
+    font-size: 2rem;
+}
+
+.glow-container {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.glow {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: var(--neon-yellow);
+    bottom: 100%;
+    opacity: 0;
+    filter: blur(1px);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--neon-yellow);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(180deg);
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7rem 2rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+h1 i {
+    color: var(--neon-yellow);
+    font-size: 2rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+}
+
+/* Levels Grid */
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.level-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--neon-yellow);
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px var(--neon-glow);
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--neon-glow),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.level-card:hover .card-glow {
+    left: 100%;
+}
+
+.level-number {
+    background: var(--neon-yellow);
+    color: var(--bg-primary);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 15px var(--neon-glow);
+}
+
+.level-card h2 {
+    color: var(--neon-yellow);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.level-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.play-button {
+    background: transparent;
+    color: var(--neon-yellow);
+    border: 1px solid var(--neon-yellow);
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.play-button:hover {
+    background: var(--neon-yellow);
+    color: var(--bg-primary);
+    box-shadow: 0 0 20px var(--neon-glow);
+}
+
+/* Particles */
+.particles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    background: var(--neon-yellow);
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.3;
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Cursor Trail */
+.cursor-trail {
+    width: 10px;
+    height: 10px;
+    background: var(--neon-yellow);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10000;
+    transition: opacity 0.3s;
+    box-shadow: 0 0 10px var(--neon-yellow);
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: 10px;
+        opacity: 0.5;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 6rem 1rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .levels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .level-card {
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,282 @@
+:root[data-theme="dark"] {
+    --bg-primary: #1a1a2e;
+    --bg-card: #16213e;
+    --text-primary: #ffffff;
+    --text-secondary: #a7a7a7;
+    --python-blue: #306998;
+    --python-yellow: #ffd43b;
+    --python-glow: rgba(48, 105, 152, 0.5);
+    --python-dim: rgba(48, 105, 152, 0.2);
+    --card-shadow: 0 0 20px rgba(48, 105, 152, 0.3);
+}
+
+:root[data-theme="light"] {
+    --bg-primary: #f0f0f0;
+    --bg-card: #ffffff;
+    --text-primary: #16213e;
+    --text-secondary: #444444;
+    --python-blue: #306998;
+    --python-yellow: #ffd43b;
+    --python-glow: rgba(48, 105, 152, 0.5);
+    --python-dim: rgba(48, 105, 152, 0.2);
+    --card-shadow: 0 0 20px rgba(48, 105, 152, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    background: var(--bg-card);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--python-blue);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo a {
+    color: var(--python-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.python-logo {
+    position: relative;
+    color: var(--python-blue);
+    font-size: 1.5rem;
+}
+
+.glow-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.glow {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--python-glow);
+    border-radius: 50%;
+    animation: glow 2s infinite;
+}
+
+.glow:nth-child(2) { animation-delay: 0.3s; }
+.glow:nth-child(3) { animation-delay: 0.6s; }
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--python-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Levels Grid */
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Level Card */
+.level-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--python-blue), var(--python-yellow));
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 0;
+}
+
+.level-card:hover .card-glow {
+    opacity: 0.1;
+}
+
+.level-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    background: var(--python-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.level-card h2 {
+    color: var(--python-blue);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.level-card p {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Snake Decoration */
+.snake-decoration {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 100px;
+    height: 100px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M10,50 Q30,30 50,50 T90,50" fill="none" stroke="%23306998" stroke-width="3"/></svg>');
+    opacity: 0.2;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.level-card:hover .snake-decoration {
+    transform: rotate(60deg);
+}
+
+/* Play Button */
+.play-button {
+    background: var(--python-blue);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+    width: 100%;
+    justify-content: center;
+}
+
+.play-button:hover {
+    background: var(--python-yellow);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px var(--python-glow);
+}
+
+/* Floating Pythons */
+.floating-pythons {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.python-icon {
+    position: absolute;
+    color: var(--python-dim);
+    font-size: 2rem;
+    animation: float 10s infinite linear;
+}
+
+.python-icon:nth-child(1) { left: 10%; animation-delay: 0s; }
+.python-icon:nth-child(2) { left: 50%; animation-delay: 3s; }
+.python-icon:nth-child(3) { left: 80%; animation-delay: 6s; }
+
+/* Cursor Trail */
+.cursor-trail {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--python-blue);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 9999;
+}
+
+/* Animations */
+@keyframes glow {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.5; }
+}
+
+@keyframes float {
+    0% { transform: translateY(-100%) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.3; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .levels-grid {
+        grid-template-columns: 1fr;
+    }
+}

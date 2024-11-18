@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Fundamentos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel1.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+            <div class="js-logo">
+                <i class="fab fa-js"></i>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="game-container">
+        <!-- Lado Esquerdo - Explicação e Desafio -->
+        <div class="challenge-section">
+            <div class="challenge-content">
+                <h2>Console.log em JavaScript</h2>
+                
+                <!-- Explicação -->
+                <div class="explanation">
+                    <p class="explanation-text"></p>
+                </div>
+
+                <!-- Tarefa -->
+                <div class="task">
+                    <h3>Sua Tarefa:</h3>
+                    <p class="task-text"></p>
+                </div>
+
+                <!-- Botões de Ajuda -->
+                <div class="help-buttons">
+                    <button id="tipBtn" class="tip-btn">
+                        <i class="fas fa-lightbulb"></i>
+                        Mostrar Dica
+                        <span class="tip-counter">1/3</span>
+                    </button>
+                    <div class="tip-container">
+                        <!-- As dicas serão inseridas aqui -->
+                    </div>
+                </div>
+
+                <!-- Botão de Próximo Nível (inicialmente escondido) -->
+                <button id="nextBtn" class="next-btn" style="display: none;">
+                    <i class="fas fa-arrow-right"></i>
+                    Próximo Nível
+                </button>
+
+                <!-- Botão de Menu (inicialmente escondido) -->
+                <button id="menuBtn" class="menu-btn" style="display: none;">
+                    <i class="fas fa-list"></i>
+                    Voltar ao Menu
+                </button>
+            </div>
+        </div>
+
+        <!-- Centro - Editor -->
+        <div class="editor-section">
+            <div class="editor-header">
+                <span>script.js</span>
+                <button class="run-btn" onclick="runCode()">
+                    <i class="fas fa-play"></i>
+                    Executar
+                </button>
+            </div>
+            <div class="editor-content">
+                <textarea id="codeEditor" spellcheck="false" placeholder="Digite seu código aqui..."></textarea>
+            </div>
+        </div>
+
+        <!-- Lado Direito - Console -->
+        <div class="console-section">
+            <div class="console-header">
+                <span>Console</span>
+                <button onclick="clearConsole()">Limpar</button>
+            </div>
+            <div class="console-content" id="consoleOutput"></div>
+        </div>
+    </div>
+
+    <script src="nivel1.js"></script>
+</body>
+</html>

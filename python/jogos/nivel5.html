@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Listas e Dicionários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="nivel5.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <a href="../../index.html">
+                <i class="fas fa-chevron-left"></i>
+                Voltar
+            </a>
+            <div class="python-logo">
+                <i class="fab fa-python"></i>
+            </div>
+        </div>
+        <button id="themeToggle" class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container">
+        <!-- Seção de Explicação -->
+        <div id="explanation" class="section">
+            <h2>Listas e Dicionários em Python</h2>
+            <div class="content">
+                <h3>Listas:</h3>
+                <p>Listas são coleções ordenadas de itens que podem ser de diferentes tipos.</p>
+                <pre>
+# Criando listas
+frutas = ['maçã', 'banana', 'laranja']
+numeros = [1, 2, 3, 4, 5]
+
+# Acessando elementos
+primeira_fruta = frutas[0]      # maçã
+ultima_fruta = frutas[-1]       # laranja
+
+# Modificando elementos
+frutas[1] = 'pera'              # ['maçã', 'pera', 'laranja']
+
+# Métodos comuns
+frutas.append('uva')            # Adiciona ao final
+frutas.remove('maçã')           # Remove elemento
+len(frutas)                     # Tamanho da lista
+                </pre>
+
+                <h3>Dicionários:</h3>
+                <p>Dicionários são coleções de pares chave-valor.</p>
+                <pre>
+# Criando dicionários
+pessoa = {
+    'nome': 'Ana',
+    'idade': 25,
+    'cidade': 'São Paulo'
+}
+
+# Acessando valores
+nome = pessoa['nome']           # Ana
+idade = pessoa.get('idade')     # 25
+
+# Modificando valores
+pessoa['idade'] = 26
+
+# Métodos comuns
+pessoa.keys()                   # Lista de chaves
+pessoa.values()                 # Lista de valores
+pessoa.items()                  # Lista de pares chave-valor
+                </pre>
+
+                <div class="start-quiz">
+                    <p>Pronto para testar seus conhecimentos?</p>
+                    <button id="startQuizBtn" class="btn">Começar Quiz</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção do Quiz (inicialmente escondida) -->
+        <div id="quiz" class="section" style="display: none;">
+            <h2>Quiz: Listas e Dicionários</h2>
+            <div class="quiz-container">
+                <div id="question" class="question">
+                    <!-- Pergunta será inserida aqui -->
+                </div>
+                <div id="options" class="options">
+                    <!-- Opções serão inseridas aqui -->
+                </div>
+                <div class="quiz-footer">
+                    <span id="questionNumber">Pergunta 1/7</span>
+                    <button id="nextBtn" class="btn" disabled>Próxima</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Resultado (inicialmente escondida) -->
+        <div id="result" class="section" style="display: none;">
+            <h2>Resultado do Quiz</h2>
+            <div class="result-container">
+                <div id="score" class="score">
+                    <!-- Pontuação será inserida aqui -->
+                </div>
+                <div id="feedback" class="feedback">
+                    <!-- Feedback será inserido aqui -->
+                </div>
+                <div class="result-buttons">
+                    <button id="retryBtn" class="btn">Tentar Novamente</button>
+                    <button id="menuBtn" class="btn">Voltar ao Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="nivel5.js"></script>
+</body>
+</html>

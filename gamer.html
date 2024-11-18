@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gamer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&amp;display=swap">
+    <link rel="stylesheet" href="./css/perfil.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://kit.fontawesome.com/552ebddad2.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav id="navbar">
+          <i class="" id="nav_logo">CodeCrafters</i>
+  
+          <ul id="nav_list">
+              <li class="nav-item active">
+                  <a href="index.html">Início</a>
+              </li>
+              <li class="nav-item">
+                  <a href="linguagens.html">Módulos</a>
+              </li>
+              <li class="nav-item">
+                  <a href="sobre.html">Sobre nós</a>
+              </li>
+          </ul>
+  
+          <button class="btn-default">
+              <a href="gamer.html">Gamer</a>
+          </button>
+  
+          <!-- Botão de troca de tema -->
+          <button id="theme-toggle">
+              <i id="theme-icon" class="fa-solid fa-sun"></i>
+          </button>
+  
+          <button id="mobile_btn">
+              <i class="fa-solid fa-bars"></i>
+          </button>
+      </nav>
+  </header>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+      <section class="perfil text-center">
+        <img class="perfil__avatar img-fluid rounded-circle" src="../images/avatar.jpg" alt="Avatar">
+        <h2 class="perfil__nombre">John Wick</h2>
+        <h3 class="perfil__titulo">id: #3442</h3>
+        <a class="perfil__boton btn btn-dark" href="#">2º colocado</a>
+        <div class="estadistica--perfil d-flex justify-content-around align-items-center mt-3 p-3 shadow-sm rounded">
+          <div class="estadistica_elemento text-center">
+            <h3>22</h3><span>Conquistas</span>
+          </div>
+          <div class="estadistica_elemento text-center">
+            <h3>105</h3><span>XPs</span>
+          </div>
+          <div class="estadistica_elemento text-center">
+            <h3>48</h3><span>Especialista</span>
+          </div>
+        </div>
+        <div class="perfil__minibio mt-4">
+          <h2>Descrição</h2>
+          <h3>Viciado em conhecimento e aprofundamento de novas linguagens</h3>
+        </div>
+        <div class="ubicacion--perfil d-flex align-items-center mt-4 p-3 shadow-sm rounded">
+          <i class="fas fa-map-marker-alt me-3"></i>
+          <div>
+            <h2>Rio Grande do Sul</h2>
+          </div>
+        </div>
+      </section>
+      <aside class="articulos mt-5">
+        <div class="articulo mb-4">
+          <span class="articulo__categoria text-uppercase text-primary fw-bold">Javamaníaco</span>
+          <h2 class="articulo__titulo mt-2">Level 12</h2>
+          <p class="articulo__descripcion">Especialista em zerar os módulos do Java, e principalmente com aproveitamento de 100%.</p>
+        </div>
+        <div class="articulo mb-4">
+          <span class="articulo__categoria text-uppercase text-primary fw-bold">Bruxoscript</span>
+          <h2 class="articulo__titulo mt-2">Level 8</h2>
+          <p class="articulo__descripcion">Faz magia quando o assunto envolve JavaScript.</p>
+        </div>
+        <div class="articulo mb-4">
+          <span class="articulo__categoria text-uppercase text-primary fw-bold">Juniorpython</span>
+          <h2 class="articulo__titulo mt-2">Level 3</h2>
+          <p class="articulo__descripcion">Iniciante e aspirante na linguagem Python.</p>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <img src="src/images/wave.svg" alt="">
+
+      <div id="footer_items">
+          <span id="copyright">
+              CodeCrafters
+          </span>
+
+          <div class="social-media-buttons">
+              <a href="">
+                  <i class="fa-brands fa-whatsapp"></i>
+              </a>
+
+              <a href="">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
+
+              <a href="">
+                  <i class="fa-brands fa-facebook"></i>
+              </a>
+          </div>
+      </div>
+  </footer>
+  <script>
+    // Função para alternar entre os modos claro e escuro
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+// Verifica o estado do tema e aplica o tema apropriado
+function toggleTheme() {
+    document.body.classList.toggle('dark-mode');
+    
+    // Altera o ícone conforme o tema
+    if (document.body.classList.contains('dark-mode')) {
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+    } else {
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+    }
+}
+
+// Verifica o tema inicial (caso o usuário tenha um tema preferido ou salvo)
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+}
+
+// Adiciona o evento de clique para o botão de alternância de tema
+themeToggleButton.addEventListener('click', function() {
+    toggleTheme();
+    
+    // Salva a preferência do tema no localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+</script>
+
+  </body>
+</html>
